@@ -84,3 +84,7 @@ MACD: 🟡持有 → 0 × 1.5 = 0
 平衡型：0.6-0.7
 
 保守型：0.7-0.8
+
+## 3 初版运行状态
+<img width="2840" height="1636" alt="QQ_1761211791813" src="https://github.com/user-attachments/assets/906a56dd-d944-463c-b371-9ba15af3d1a7" />
+
