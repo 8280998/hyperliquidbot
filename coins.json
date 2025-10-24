@@ -1,0 +1,73 @@
+{
+  "coin_id_mapping": {
+    "ETH": "ethereum",
+    "BTC": "bitcoin", 
+    "SOL": "solana",
+    "AVAX": "avalanche-2",
+    "MATIC": "matic-network",
+    "OM": "mantra-dao",
+    "DOGE": "dogecoin",
+    "FARTCOIN": "fartcoin", 
+    "JUP": "jupiter-perpetuals-liquidity-provider-token",
+    "ADA": "cardano"
+  },
+  "supported_coins": [
+    "ETH", "BTC", "SOL", "AVAX", "MATIC", "OM", "DOGE", "FARTCOIN", "JUP", "ADA"
+  ],
+  "trading_config": {
+    "ADA": {
+      "price_precision": 5,
+      "size_precision": 0,
+      "min_size": 1
+    },
+    "BTC": {
+      "price_precision": 0,
+      "size_precision": 5, 
+      "min_size": 0.0001
+    },
+    "ETH": {
+      "price_precision": 1,
+      "size_precision": 4,
+      "min_size": 0.001
+    },
+    "SOL": {
+      "price_precision": 2,
+      "size_precision": 2,
+      "min_size": 0.01
+    },
+    "AVAX": {
+      "price_precision": 3,
+      "size_precision": 2,
+      "min_size": 0.01
+    },
+    "MATIC": {
+      "price_precision": 4,
+      "size_precision": 0,
+      "min_size": 1
+    },
+    "DOGE": {
+      "price_precision": 5,
+      "size_precision": 0,
+      "min_size": 1
+    },
+    "JUP": {
+      "price_precision": 5,
+      "size_precision": 0,
+      "min_size": 1
+    },
+    "FARTCOIN": {
+      "price_precision": 5,
+      "size_precision": 1,
+      "min_size": 0.1
+    },
+    "OM": {
+      "price_precision": 5,
+      "size_precision": 1,
+      "min_size": 1
+    }
+  },
+  "data_sources": {
+    "primary": "CoinGecko",
+    "fallback": "Binance"
+  }
+}
