@@ -3,6 +3,8 @@
 
 交易策略暂定四个：均线，RSI，MACD，布林带
 
+发现暂时问题：风险控制会在设置值小范围波动
+
 ## 1 模型算法：
 权重模式交易决策公式
 
@@ -86,7 +88,8 @@ MACD: 🟡持有 → 0 × 1.5 = 0
 保守型：0.7-0.8
 
 ## 3 初版运行状态
-<img width="2802" height="1638" alt="QQ_1761294792783" src="https://github.com/user-attachments/assets/3a33751d-1ed0-4917-add9-9557bb9d2b7f" />
+<img width="2844" height="1644" alt="QQ_1761294877955" src="https://github.com/user-attachments/assets/b24367e9-8497-499c-9e03-c59b1d08b825" />
+
 
 
 
