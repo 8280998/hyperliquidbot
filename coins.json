@@ -1,7 +1,8 @@
 {
   "coin_id_mapping": {
     "ETH": "ethereum",
-    "BTC": "bitcoin", 
+    "BTC": "bitcoin",
+    "BNB": "binancecoin",
     "SOL": "solana",
     "AVAX": "avalanche-2",
     "MATIC": "matic-network",
@@ -12,58 +13,80 @@
     "ADA": "cardano"
   },
   "supported_coins": [
-    "ETH", "BTC", "SOL", "AVAX", "MATIC", "OM", "DOGE", "FARTCOIN", "JUP", "ADA"
+    "ETH", "BTC", "SOL", "AVAX", "MATIC", "OM", "DOGE", "FARTCOIN", "JUP", "ADA", "BNB"
   ],
   "trading_config": {
     "ADA": {
+      "max_leverage": 3,
       "price_precision": 5,
       "size_precision": 0,
       "min_size": 1
     },
     "BTC": {
+      "max_leverage": 20,
       "price_precision": 0,
       "size_precision": 5, 
       "min_size": 0.0001
     },
     "ETH": {
+      "max_leverage": 20,
       "price_precision": 1,
       "size_precision": 4,
       "min_size": 0.001
     },
     "SOL": {
+      "max_leverage": 10,
       "price_precision": 2,
       "size_precision": 2,
       "min_size": 0.01
     },
+    "BNB": {
+      "max_leverage": 10,
+      "price_precision": 1,
+      "size_precision": 3,
+      "min_size": 0.001
+    },
     "AVAX": {
+      "max_leverage": 10,
       "price_precision": 3,
       "size_precision": 2,
       "min_size": 0.01
     },
     "MATIC": {
+      "max_leverage": 10,
       "price_precision": 4,
       "size_precision": 0,
       "min_size": 1
     },
     "DOGE": {
+      "max_leverage": 10,
       "price_precision": 5,
       "size_precision": 0,
       "min_size": 1
     },
     "JUP": {
+      "max_leverage": 20,
       "price_precision": 5,
       "size_precision": 0,
       "min_size": 1
     },
     "FARTCOIN": {
+      "max_leverage": 10,
       "price_precision": 5,
       "size_precision": 1,
       "min_size": 0.1
     },
     "OM": {
+      "max_leverage": 5,
       "price_precision": 5,
       "size_precision": 1,
       "min_size": 1
+    },
+    "DEFAULT": {
+      "max_leverage": 5,
+      "price_precision": 4,
+      "size_precision": 2,
+       "min_size": 0.01
     }
   },
   "data_sources": {
