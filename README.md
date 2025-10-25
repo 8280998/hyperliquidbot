@@ -1,4 +1,4 @@
-# nof1ai
+# hyperliquid自动调仓机器人
 根据 https://nof1.ai/  的启发， 编写一个由代码判断自主调仓交易模型
 
 交易策略暂定四个：均线，RSI，MACD，布林带
