@@ -105,6 +105,8 @@ MACD: 🟡持有 → 0 × 1.5 = 0
 4.1 修复代码，已严格控制保证金在风险范围内开仓
 <img width="2042" height="1398" alt="QQ_1761376251278" src="https://github.com/user-attachments/assets/945dde0e-5da6-46ea-bcbc-3a3d12f68461" />
 
+## 5 更新日志
+### 5.1  2025-10-25 添加了空翻多，多翻空的自动判断执行逻辑，尚未验证正确性，程序在hyperliquid测试网的持仓没有触发这个条件。执行正确性待验证
 
 
 
