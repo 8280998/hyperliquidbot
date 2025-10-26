@@ -125,7 +125,12 @@ MACD: 🟡持有 → 0 × 1.5 = 0
 <img width="2042" height="1398" alt="QQ_1761376251278" src="https://github.com/user-attachments/assets/945dde0e-5da6-46ea-bcbc-3a3d12f68461" />
 
 ## 5 更新日志
-###  2025-10-25 添加了空翻多，多翻空的自动判断执行逻辑，尚未验证正确性，当前程序在hyperliquid测试网的持仓没有触发这个条件。执行正确性待验证。
+###  2025-10-25 添加了空翻多，多翻空的自动判断执行逻辑，空翻多的信号策略已触发并正确执行。
+### 下午17:33 触发空翻多的逻辑并根据策略信号正确执行了交易。
+<img width="1958" height="1352" alt="QQ_1761472816706" src="https://github.com/user-attachments/assets/12517808-2888-4c0a-b111-1a0602d6e18b" />
+### 在平掉空头并执行买入策略后，下一轮检测还没达到风险控制的20%，触发加仓的策略的。
+<img width="1910" height="1234" alt="QQ_1761472929114" src="https://github.com/user-attachments/assets/89ea1d44-a84a-4081-b3f6-a8ee5a81def7" />
+
 ###  2025-10-26 1.解决hyperliquid在精度问题下单失败的问题，精度问题包括币种下单数量，下单价格的精度问题
 ###  2025-10-26 2.加仓逻辑处理：当某个币种使用保证金低于总保证金的20%，同时又发出强烈的交易信号，自动执行加仓策略，同时控制总风险还在20%范围内。即使返回交易失败信息也需要检查持仓是否增加
 <img width="2266" height="1308" alt="QQ_1761448540022" src="https://github.com/user-attachments/assets/3eef1c45-5a0e-475c-8d97-a7d5fbcd386d" />
