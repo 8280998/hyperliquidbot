@@ -180,5 +180,10 @@ MACD: 🟡持有 → 0 × 1.5 = 0
 实盘使用保守的平衡稳定策略，权重值设置为：1.5,1.2,1.0,0.8。交易币种为BTC，ETH，BNB，SOL，DOGE，XPR。策略发出的信号阈值为0.55。止盈信号阈值为0.65
 <img width="1968" height="1304" alt="QQ_1761818535132" src="https://github.com/user-attachments/assets/c429ab72-4816-4b74-8dc9-0178364d8d22" />
 
+第一单开的做空BNB，做空信号强度0.56，做空价格1093
+<img width="2276" height="1286" alt="QQ_1761902733179" src="https://github.com/user-attachments/assets/3020c0c1-382b-41c3-9a54-0393fd31833a" />
+后续发现一个仓位计算的错误，导致bnb做空2次。。。修复
+
+
 
 
