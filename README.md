@@ -184,6 +184,8 @@ MACD: 🟡持有 → 0 × 1.5 = 0
 <img width="2276" height="1286" alt="QQ_1761902733179" src="https://github.com/user-attachments/assets/3020c0c1-382b-41c3-9a54-0393fd31833a" />
 后续发现一个仓位计算的错误，导致bnb做空2次。。。修复
 
+## 2025-11-03 晚上21:59发出ETH做空信息，信号强度0.56，做空价格3718.1
+
 
 
 
