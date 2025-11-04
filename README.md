@@ -1,7 +1,7 @@
 # hyperliquid多策略自动调仓机器人
 根据 https://nof1.ai/  的启发， 编写一个由代码判断多策略（当前启用4种）自主调仓交易模型，代码尚未开源，需要执行一段时间验证正确性。
 
-实盘地址：https://hypurrscan.io/address/0x8aDaCE41Ec579423F149d7402f282301fCFaFF36
+实盘观察地址：https://hyperbot.network/trader/0x8aDaCE41Ec579423F149d7402f282301fCFaFF36
 
 交易策略暂定四个：均线，RSI，MACD，布林带
 
@@ -177,7 +177,7 @@ MACD: 🟡持有 → 0 × 1.5 = 0
 ### 2025-10-27 增加一个止盈阈值控制。在现有信号强度基础上增加止盈判断条件。
 
 ### 实盘测试 2025-10-30启动 日志和思考
-实盘地址：https://hypurrscan.io/address/0x8aDaCE41Ec579423F149d7402f282301fCFaFF36
+实盘观察地址：https://hyperbot.network/trader/0x8aDaCE41Ec579423F149d7402f282301fCFaFF36
 
 实盘使用保守的平衡稳定策略，权重值设置为：1.5,1.2,1.0,0.8。交易币种为BTC，ETH，BNB，SOL，DOGE，XPR。策略发出的信号阈值为0.55。止盈信号阈值为0.65
 <img width="1968" height="1304" alt="QQ_1761818535132" src="https://github.com/user-attachments/assets/c429ab72-4816-4b74-8dc9-0178364d8d22" />
