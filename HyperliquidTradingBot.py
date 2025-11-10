@@ -205,12 +205,13 @@ class HyperliquidTradingBot:
         kline_frame.grid(row=1, column=1, sticky=tk.W, pady=2, padx=(5, 0))
 
         # Radio buttons for 固定周期
-        self.kline_interval_var = tk.StringVar(value="1d")  # 默认1d
-        ttk.Radiobutton(kline_frame, text="1h", variable=self.kline_interval_var, value="1h").grid(row=0, column=0, sticky=tk.W)
-        ttk.Radiobutton(kline_frame, text="4h", variable=self.kline_interval_var, value="4h").grid(row=0, column=1, sticky=tk.W, padx=(10, 0))
-        ttk.Radiobutton(kline_frame, text="6h", variable=self.kline_interval_var, value="6h").grid(row=0, column=2, sticky=tk.W, padx=(10, 0))
-        ttk.Radiobutton(kline_frame, text="12h", variable=self.kline_interval_var, value="12h").grid(row=0, column=3, sticky=tk.W, padx=(10, 0))
-        ttk.Radiobutton(kline_frame, text="1d", variable=self.kline_interval_var, value="1d").grid(row=0, column=4, sticky=tk.W, padx=(10, 0))
+        self.kline_interval_var = tk.StringVar(value="30m")  # 默认30m
+        ttk.Radiobutton(kline_frame, text="5m", variable=self.kline_interval_var, value="5m").grid(row=0, column=0, sticky=tk.W)
+        ttk.Radiobutton(kline_frame, text="30m", variable=self.kline_interval_var, value="30m").grid(row=0, column=1, sticky=tk.W, padx=(10, 0))
+        ttk.Radiobutton(kline_frame, text="1h", variable=self.kline_interval_var, value="1h").grid(row=0, column=2, sticky=tk.W, padx=(10, 0))
+        ttk.Radiobutton(kline_frame, text="6h", variable=self.kline_interval_var, value="6h").grid(row=0, column=3, sticky=tk.W, padx=(10, 0))
+        ttk.Radiobutton(kline_frame, text="12h", variable=self.kline_interval_var, value="12h").grid(row=0, column=4, sticky=tk.W, padx=(10, 0))
+        ttk.Radiobutton(kline_frame, text="1d", variable=self.kline_interval_var, value="1d").grid(row=0, column=5, sticky=tk.W, padx=(10, 0))
 
         
         ttk.Label(left_frame, text="策略:").grid(row=2, column=0, sticky=tk.W, pady=2)
