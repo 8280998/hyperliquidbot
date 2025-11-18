@@ -196,7 +196,7 @@ class HyperliquidTradingBot:
         left_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(0, 5))
         
         ttk.Label(left_frame, text="交易代币:").grid(row=0, column=0, sticky=tk.W, pady=2)
-        self.tokens_entry = ttk.Entry(left_frame, width=20)
+        self.tokens_entry = ttk.Entry(left_frame, width=28)
         self.tokens_entry.grid(row=0, column=1, sticky=tk.W, pady=2, padx=(5, 0))
         
         #  “K线设置” (row=1)
@@ -205,13 +205,14 @@ class HyperliquidTradingBot:
         kline_frame.grid(row=1, column=1, sticky=tk.W, pady=2, padx=(5, 0))
 
         # Radio buttons for 固定周期
-        self.kline_interval_var = tk.StringVar(value="30m")  # 默认30m
-        ttk.Radiobutton(kline_frame, text="5m", variable=self.kline_interval_var, value="5m").grid(row=0, column=0, sticky=tk.W)
-        ttk.Radiobutton(kline_frame, text="30m", variable=self.kline_interval_var, value="30m").grid(row=0, column=1, sticky=tk.W, padx=(10, 0))
-        ttk.Radiobutton(kline_frame, text="1h", variable=self.kline_interval_var, value="1h").grid(row=0, column=2, sticky=tk.W, padx=(10, 0))
-        ttk.Radiobutton(kline_frame, text="6h", variable=self.kline_interval_var, value="6h").grid(row=0, column=3, sticky=tk.W, padx=(10, 0))
-        ttk.Radiobutton(kline_frame, text="12h", variable=self.kline_interval_var, value="12h").grid(row=0, column=4, sticky=tk.W, padx=(10, 0))
-        ttk.Radiobutton(kline_frame, text="1d", variable=self.kline_interval_var, value="1d").grid(row=0, column=5, sticky=tk.W, padx=(10, 0))
+        self.kline_interval_var = tk.StringVar(value="5m")  # 默认1d
+        ttk.Radiobutton(kline_frame, text="1m", variable=self.kline_interval_var, value="1m").grid(row=0, column=0, sticky=tk.W)
+        ttk.Radiobutton(kline_frame, text="5m", variable=self.kline_interval_var, value="5m").grid(row=0, column=1, sticky=tk.W)
+        ttk.Radiobutton(kline_frame, text="30m", variable=self.kline_interval_var, value="30m").grid(row=0, column=2, sticky=tk.W)
+        ttk.Radiobutton(kline_frame, text="1h", variable=self.kline_interval_var, value="1h").grid(row=0, column=3, sticky=tk.W)
+        ttk.Radiobutton(kline_frame, text="6h", variable=self.kline_interval_var, value="6h").grid(row=0, column=4, sticky=tk.W)
+        ttk.Radiobutton(kline_frame, text="12h", variable=self.kline_interval_var, value="12h").grid(row=0, column=5, sticky=tk.W)
+        ttk.Radiobutton(kline_frame, text="1d", variable=self.kline_interval_var, value="1d").grid(row=0, column=6, sticky=tk.W)
 
         
         ttk.Label(left_frame, text="策略:").grid(row=2, column=0, sticky=tk.W, pady=2)
@@ -265,50 +266,50 @@ class HyperliquidTradingBot:
         center_frame.grid(row=0, column=1, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(5, 5))
 
         ttk.Label(center_frame, text="单币最大仓位(%):").grid(row=5, column=0, sticky=tk.W, pady=1)
-        self.single_coin_max_pct = ttk.Entry(center_frame, width=8)
+        self.single_coin_max_pct = ttk.Entry(center_frame, width=5)
         self.single_coin_max_pct.insert(0, "40")
         self.single_coin_max_pct.grid(row=5, column=1, sticky=tk.W, pady=1, padx=(2, 0))
 
         # 止盈信号阈值
         ttk.Label(center_frame, text="止盈信号阈值:").grid(row=5, column=2, sticky=tk.W, pady=1, padx=(5, 0))
-        self.profit_signal_threshold = ttk.Entry(center_frame, width=8)
+        self.profit_signal_threshold = ttk.Entry(center_frame, width=5)
         self.profit_signal_threshold.insert(0, "0.7")
         self.profit_signal_threshold.grid(row=5, column=3, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="单仓保证金比例(%):").grid(row=0, column=0, sticky=tk.W, pady=1)
-        self.max_margin_pct = ttk.Entry(center_frame, width=8)
+        self.max_margin_pct = ttk.Entry(center_frame, width=5)
         self.max_margin_pct.grid(row=0, column=1, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="总保证金比例(%):").grid(row=0, column=2, sticky=tk.W, pady=1, padx=(5, 0))
-        self.total_margin_pct = ttk.Entry(center_frame, width=8)
+        self.total_margin_pct = ttk.Entry(center_frame, width=5)
         self.total_margin_pct.grid(row=0, column=3, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="最大币种:").grid(row=1, column=0, sticky=tk.W, pady=1)
-        self.max_coins = ttk.Entry(center_frame, width=8)
+        self.max_coins = ttk.Entry(center_frame, width=5)
         self.max_coins.grid(row=1, column=1, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="止盈(%):").grid(row=1, column=2, sticky=tk.W, pady=1, padx=(5, 0))
-        self.take_profit_pct = ttk.Entry(center_frame, width=8)
+        self.take_profit_pct = ttk.Entry(center_frame, width=5)
         self.take_profit_pct.grid(row=1, column=3, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="止损(%):").grid(row=2, column=0, sticky=tk.W, pady=1)
-        self.stop_loss_pct = ttk.Entry(center_frame, width=8)
+        self.stop_loss_pct = ttk.Entry(center_frame, width=5)
         self.stop_loss_pct.grid(row=2, column=1, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="保证金止损(%):").grid(row=2, column=2, sticky=tk.W, pady=1, padx=(5, 0))
-        self.margin_stop_pct = ttk.Entry(center_frame, width=8)
+        self.margin_stop_pct = ttk.Entry(center_frame, width=5)
         self.margin_stop_pct.grid(row=2, column=3, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="保证金:").grid(row=3, column=0, sticky=tk.W, pady=1)
-        self.margin_size = ttk.Entry(center_frame, width=8)
+        self.margin_size = ttk.Entry(center_frame, width=5)
         self.margin_size.grid(row=3, column=1, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="杠杆倍数:").grid(row=3, column=2, sticky=tk.W, pady=1, padx=(5, 0))
-        self.leverage = ttk.Entry(center_frame, width=8)
+        self.leverage = ttk.Entry(center_frame, width=5)
         self.leverage.grid(row=3, column=3, sticky=tk.W, pady=1, padx=(2, 0))
         
         ttk.Label(center_frame, text="间隔(秒):").grid(row=4, column=0, sticky=tk.W, pady=1)
-        self.check_interval = ttk.Entry(center_frame, width=8)
+        self.check_interval = ttk.Entry(center_frame, width=5)
         self.check_interval.grid(row=4, column=1, sticky=tk.W, pady=1, padx=(2, 0))
         
         self.auto_rebalance_var = tk.BooleanVar(value=True)
@@ -1651,6 +1652,23 @@ class HyperliquidTradingBot:
                         self.log_message(f" {token} 处于交易锁定期，跳过止盈止损检查", "debug")
                         continue
                     
+                    #  新增：数据可用性验证
+                    price_data = self.get_stable_real_time_price(token)
+                    if not price_data:
+                        self.log_message(f"⚠️ {token} 无法获取实时价格，跳过止盈止损", "warning")
+                        continue
+        
+                    current_price = price_data['price']
+                    if current_price <= 0:
+                        self.log_message(f"⚠️ {token} 价格数据异常: ${current_price}，跳过止盈止损", "warning")
+                        continue
+    
+                    # 新增：历史数据验证
+                    historical_data = self.get_historical_prices(token, periods=60)
+                    if not historical_data or len(historical_data) < 60:
+                        self.log_message(f"⚠️ {token} 历史数据不足{len(historical_data) if historical_data else 0}/60，跳过止盈止损", "warning")
+                        continue
+
                     price_data = self.get_stable_real_time_price(token)
                     if not price_data:
                         continue
@@ -3154,19 +3172,8 @@ class HyperliquidTradingBot:
         ))
 
     def check_take_profit_stop_loss(self, position_info):
-        """检查止盈止损 - 添加数据验证"""
-        #  验证数据完整性
-        if not position_info or position_info.get('current_price', 0) <= 0:
-            self.log_message(" 价格数据无效，跳过止盈止损检查", "warning")
-            return None
-        
+        """检查单个仓位止盈止损 - 保持原样"""
         pnl = position_info['pnl_percent']
-    
-        # 如果盈亏数据异常，也跳过
-        if abs(pnl) > 1000:  # 合理的盈亏范围
-            self.log_message(f"盈亏数据异常: {pnl}%，跳过止盈止损", "warning")
-            return None
-        
         take_profit_pct = float(self.take_profit_pct.get() or 15)
         stop_loss_pct = float(self.stop_loss_pct.get() or 8)
     
