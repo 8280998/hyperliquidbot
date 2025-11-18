@@ -20,5 +20,8 @@
   "check_interval": "20",
   "auto_rebalance": true,
   "kline_interval": "1d",
-  "save_time": "2025-11-08T08:53:56.749979"
+  "enable_secondary": true,
+  "secondary_timeframe": "6h",
+  "secondary_threshold": "0.5",
+  "save_time": "2025-11-18T11:58:12.049504"
 }
