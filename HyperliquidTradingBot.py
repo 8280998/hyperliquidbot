@@ -3154,11 +3154,22 @@ class HyperliquidTradingBot:
         ))
 
     def check_take_profit_stop_loss(self, position_info):
-        """检查单个仓位止盈止损"""
+        """检查止盈止损 - 添加数据验证"""
+        #  验证数据完整性
+        if not position_info or position_info.get('current_price', 0) <= 0:
+            self.log_message(" 价格数据无效，跳过止盈止损检查", "warning")
+            return None
+        
         pnl = position_info['pnl_percent']
+    
+        # 如果盈亏数据异常，也跳过
+        if abs(pnl) > 1000:  # 合理的盈亏范围
+            self.log_message(f"盈亏数据异常: {pnl}%，跳过止盈止损", "warning")
+            return None
+        
         take_profit_pct = float(self.take_profit_pct.get() or 15)
         stop_loss_pct = float(self.stop_loss_pct.get() or 8)
-        
+    
         if pnl > take_profit_pct:
             return '止盈'
         elif pnl < -stop_loss_pct:
