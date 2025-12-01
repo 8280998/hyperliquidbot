@@ -83,8 +83,8 @@
       "min_size": 1
     },
     "DEFAULT": {
-      "max_leverage": 5,
-      "price_precision": 4,
+      "max_leverage": 10,
+      "price_precision": 2,
       "size_precision": 2,
        "min_size": 0.01
     }
